@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		{% block title %}
+		{% endblock %}
+		Alexandra huallcca
+	</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static  'css/style.css'%}">
+</head>
+<body>
+	<header id="header" class="">
+		<div id="logotipo">
+
+			<img src="{%static 'imagenes/logoDJango.png'%}">
+			<h1>proyecto web</h1>
+
+		</div>
+	</header><!-- /header -->
+	<nav>
+		<ul>
+        <li>
+            <a href="/inicio"> Inicio</a>
+        </li>
+        <li>
+            <a href="/saludo"> Mensaje de Saludo</a>
+        </li>
+        <li>
+            <a href="/rango"> Mostrar Números [a,b]</a>
+        </li>
+        <li>
+            <a href="/rango2/10/15"> Mostrar Números [10,15]</a>
+        </li>
+    </ul>
+	</nav>
+
+		<div class="barra">
+			<span class="esquina-izquierda"></span>
+			<span class="esquina-derecha"></span>
+			<span class="relleno-barra"></span>
+		</div>
+		
+		 
+	    
+	    <div id="content">
+	    	<div class="box">
+	    		
+		    	{%block content %}
+		    	<strong>Contenido en layout(padre)</strong>
+		    	{% endblock %}	
+	    	</div>
+	    		
+	    </div>
+	    <footer>
+	    	untels-lenguaje de programacion III &COPY; Alexandra huallcca
+	    </footer>
+</body>
+</html>
